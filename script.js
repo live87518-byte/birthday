@@ -391,3 +391,32 @@ replay.onclick=()=>{
 location.reload();
 
 }
+/*====================
+   PHONG BÌ
+====================*/
+
+const letter=document.getElementById("letter");
+
+const envelope=document.querySelector(".envelope");
+
+giftBtn.addEventListener("click",()=>{
+
+setTimeout(()=>{
+
+letter.style.display="flex";
+
+},3500);
+
+});
+
+envelope.onclick=()=>{
+
+envelope.classList.add("open");
+
+setTimeout(()=>{
+
+letter.style.display="none";
+
+},4000);
+
+};

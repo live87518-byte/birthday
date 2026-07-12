@@ -420,3 +420,97 @@ letter.style.display="none";
 },4000);
 
 };
+/*============================
+      CAMERA EFFECT
+============================*/
+
+const glass=document.querySelector(".glass");
+
+setInterval(()=>{
+
+glass.classList.add("zoomIn");
+
+setTimeout(()=>{
+
+glass.classList.remove("zoomIn");
+
+glass.classList.add("zoomOut");
+
+},1800);
+
+setTimeout(()=>{
+
+glass.classList.remove("zoomOut");
+
+},3800);
+
+},4500);
+
+
+/*============================
+        MOVING LIGHT
+============================*/
+
+const light=document.createElement("div");
+
+light.className="light";
+
+document.body.appendChild(light);
+
+
+/*============================
+        HEART BURST
+============================*/
+
+function heartExplosion(){
+
+for(let i=0;i<25;i++){
+
+const h=document.createElement("div");
+
+h.innerHTML="💖";
+
+h.style.position="fixed";
+
+h.style.left="50%";
+
+h.style.top="50%";
+
+h.style.fontSize=(20+Math.random()*20)+"px";
+
+h.style.transition="1.5s";
+
+document.body.appendChild(h);
+
+const x=(Math.random()-0.5)*700;
+
+const y=(Math.random()-0.5)*700;
+
+setTimeout(()=>{
+
+h.style.transform=`translate(${x}px,${y}px)`;
+
+h.style.opacity="0";
+
+},50);
+
+setTimeout(()=>{
+
+h.remove();
+
+},1800);
+
+}
+
+}
+
+
+/*============================
+       GIFT CLICK
+============================*/
+
+giftBtn.addEventListener("click",()=>{
+
+heartExplosion();
+
+});

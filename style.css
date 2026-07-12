@@ -940,3 +940,95 @@ opacity:0;
 }
 
 }
+/*==============================
+        CINEMATIC INTRO
+==============================*/
+
+#intro{
+    animation:introFade 1.5s ease;
+}
+
+@keyframes introFade{
+    from{
+        opacity:0;
+        transform:scale(1.08);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+/*==============================
+        FINAL TEXT
+==============================*/
+
+.finalText{
+
+position:fixed;
+
+left:50%;
+top:50%;
+
+transform:translate(-50%,-50%);
+
+font-size:52px;
+
+font-weight:700;
+
+color:white;
+
+text-shadow:
+0 0 20px hotpink,
+0 0 45px deeppink;
+
+opacity:0;
+
+z-index:99999;
+
+animation:finalShow 4s forwards;
+
+}
+
+@keyframes finalShow{
+
+0%{
+opacity:0;
+transform:translate(-50%,-50%) scale(.5);
+}
+
+25%{
+opacity:1;
+transform:translate(-50%,-50%) scale(1.1);
+}
+
+80%{
+opacity:1;
+}
+
+100%{
+opacity:0;
+transform:translate(-50%,-50%) scale(1.4);
+}
+
+}
+
+/*==============================
+        VIGNETTE
+==============================*/
+
+body::after{
+
+content:"";
+
+position:fixed;
+
+inset:0;
+
+pointer-events:none;
+
+background:radial-gradient(circle,
+transparent 55%,
+rgba(0,0,0,.35));
+
+}

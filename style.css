@@ -723,3 +723,90 @@ transform-origin:top;
 transform:translateY(-120px);
 
 }
+/*==========================
+     CAMERA ZOOM
+==========================*/
+
+.zoomIn{
+    animation:zoomIn 2s ease forwards;
+}
+
+.zoomOut{
+    animation:zoomOut 2s ease forwards;
+}
+
+@keyframes zoomIn{
+
+0%{
+transform:scale(1);
+}
+
+100%{
+transform:scale(1.08);
+}
+
+}
+
+@keyframes zoomOut{
+
+0%{
+transform:scale(1.08);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+
+/*==========================
+      LIGHT
+==========================*/
+
+.light{
+
+position:fixed;
+
+width:250px;
+height:250px;
+
+border-radius:50%;
+
+background:radial-gradient(circle,
+rgba(255,255,255,.8),
+rgba(255,255,255,0));
+
+pointer-events:none;
+
+mix-blend-mode:screen;
+
+opacity:.6;
+
+animation:lightMove 8s linear infinite;
+
+}
+
+@keyframes lightMove{
+
+0%{
+
+left:-200px;
+top:20%;
+
+}
+
+50%{
+
+left:60%;
+top:35%;
+
+}
+
+100%{
+
+left:120%;
+top:60%;
+
+}
+
+}

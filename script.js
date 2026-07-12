@@ -369,3 +369,25 @@ setInterval(()=>{
     },2200);
 
 },250);
+/*=========================
+      MÀN KẾT THÚC
+=========================*/
+
+const ending=document.getElementById("ending");
+const replay=document.getElementById("replay");
+
+setTimeout(()=>{
+
+if(giftBtn.disabled){
+
+ending.style.display="flex";
+
+}
+
+},12000);
+
+replay.onclick=()=>{
+
+location.reload();
+
+}

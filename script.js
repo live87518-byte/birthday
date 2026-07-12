@@ -591,3 +591,74 @@ iterations:1
 }
 
 setInterval(cinematic,8000);
+/*================================
+        FINAL SCENE
+================================*/
+
+function finalScene(){
+
+const t=document.createElement("div");
+
+t.className="finalText";
+
+t.innerHTML="❤️ Happy Birthday Trang ❤️";
+
+document.body.appendChild(t);
+
+setTimeout(()=>{
+
+t.remove();
+
+},4000);
+
+}
+
+/*================================
+        AUTO FIREWORK
+================================*/
+
+setTimeout(()=>{
+
+launchFireworks();
+
+},5000);
+
+/*================================
+        GIFT FINISH
+================================*/
+
+giftBtn.addEventListener("click",()=>{
+
+setTimeout(()=>{
+
+finalScene();
+
+},6000);
+
+});
+
+/*================================
+        AUTO ZOOM BG
+================================*/
+
+setInterval(()=>{
+
+const bg=document.querySelector(".bg");
+
+bg.animate([
+
+{transform:"scale(1.15)"},
+
+{transform:"scale(1.22)"},
+
+{transform:"scale(1.15)"}
+
+],{
+
+duration:12000,
+
+iterations:1
+
+});
+
+},12000);

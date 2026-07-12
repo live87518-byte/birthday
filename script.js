@@ -514,3 +514,80 @@ giftBtn.addEventListener("click",()=>{
 heartExplosion();
 
 });
+/*==========================
+      STAR SKY
+==========================*/
+
+for(let i=0;i<120;i++){
+
+const star=document.createElement("div");
+
+star.className="star";
+
+star.style.left=Math.random()*100+"vw";
+
+star.style.top=Math.random()*100+"vh";
+
+star.style.animationDelay=Math.random()*3+"s";
+
+document.body.appendChild(star);
+
+}
+
+/*==========================
+      SHOOTING STAR
+==========================*/
+
+setInterval(()=>{
+
+const meteor=document.createElement("div");
+
+meteor.className="shooting";
+
+meteor.style.left=Math.random()*30+"vw";
+
+meteor.style.top=Math.random()*30+"vh";
+
+document.body.appendChild(meteor);
+
+setTimeout(()=>{
+
+meteor.remove();
+
+},2200);
+
+},5000);
+
+/*==========================
+      GLOW RING
+==========================*/
+
+const ring=document.createElement("div");
+
+ring.className="glowRing";
+
+document.querySelector(".cake").appendChild(ring);
+
+/*==========================
+      CAMERA SHAKE
+==========================*/
+
+function cinematic(){
+
+document.body.animate([
+
+{transform:"scale(1)"},
+{transform:"scale(1.02)"},
+{transform:"scale(1)"}
+
+],{
+
+duration:3000,
+
+iterations:1
+
+});
+
+}
+
+setInterval(cinematic,8000);

@@ -662,3 +662,59 @@ iterations:1
 });
 
 },12000);
+/*==============================
+        TEXT RAIN
+==============================*/
+
+const wishes=[
+
+"🎂 Happy Birthday Trang ❤️",
+"💖 Chúc mừng sinh nhật",
+"🎉 Tuổi mới vui vẻ",
+"🌸 Luôn hạnh phúc nhé",
+"💝 Luôn mỉm cười",
+"🎈 15 tuổi thật đẹp",
+"❤️ Chúc mọi điều tốt đẹp",
+"✨ Happy Birthday",
+"🌷 Sinh nhật vui vẻ",
+"💗 Chúc bạn luôn may mắn",
+"🎁 Điều ước sẽ thành hiện thực",
+"🌹 Luôn bình an",
+"🥳 Happy Birthday Trang",
+"💞 Hãy luôn cười nhé",
+"🎂 Hôm nay là ngày của bạn",
+"💖 Chúc bạn thật nhiều niềm vui",
+"❤️ Chúc bạn luôn được yêu thương",
+"🌸 Mãi xinh đẹp nhé",
+"🎊 Chúc bạn học giỏi",
+"✨ Happy Birthday To You"
+
+];
+
+function createWish(){
+
+const text=document.createElement("div");
+
+text.className="fallingText";
+
+text.innerHTML=wishes[Math.floor(Math.random()*wishes.length)];
+
+text.style.left=Math.random()*100+"vw";
+
+text.style.fontSize=(16+Math.random()*20)+"px";
+
+text.style.animationDuration=(7+Math.random()*4)+"s";
+
+text.style.color=`hsl(${330+Math.random()*25},100%,85%)`;
+
+document.body.appendChild(text);
+
+setTimeout(()=>{
+
+text.remove();
+
+},12000);
+
+}
+
+setInterval(createWish,180);

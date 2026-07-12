@@ -810,3 +810,133 @@ top:60%;
 }
 
 }
+/*==========================
+        NIGHT SKY
+==========================*/
+
+.star{
+
+position:fixed;
+
+width:2px;
+height:2px;
+
+background:white;
+
+border-radius:50%;
+
+box-shadow:0 0 10px white;
+
+animation:twinkle 2s infinite alternate;
+
+pointer-events:none;
+
+}
+
+@keyframes twinkle{
+
+0%{
+
+opacity:.2;
+transform:scale(.6);
+
+}
+
+100%{
+
+opacity:1;
+transform:scale(1.8);
+
+}
+
+}
+
+/*==========================
+        SHOOTING STAR
+==========================*/
+
+.shooting{
+
+position:fixed;
+
+width:180px;
+
+height:2px;
+
+background:linear-gradient(to right,
+white,
+rgba(255,255,255,0));
+
+transform:rotate(-35deg);
+
+pointer-events:none;
+
+animation:shoot 2s linear forwards;
+
+}
+
+@keyframes shoot{
+
+0%{
+
+transform:translate(-300px,-300px) rotate(-35deg);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translate(1600px,900px) rotate(-35deg);
+
+opacity:0;
+
+}
+
+}
+
+/*==========================
+      GLOW EFFECT
+==========================*/
+
+.glowRing{
+
+position:absolute;
+
+width:220px;
+
+height:220px;
+
+border-radius:50%;
+
+border:2px solid rgba(255,255,255,.25);
+
+animation:ring 3s infinite;
+
+left:50%;
+
+top:90px;
+
+transform:translateX(-50%);
+
+}
+
+@keyframes ring{
+
+0%{
+
+transform:translateX(-50%) scale(.9);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateX(-50%) scale(1.35);
+
+opacity:0;
+
+}
+
+}

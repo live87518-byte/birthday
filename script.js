@@ -22,7 +22,7 @@ const FallingMess = [
 const fallingImg = [];
 
 for (let i = 1; i <= 20; i++) {
-  fallingImg.push(`style/img/Anh (${i}).jpg`);
+  fallingImg.push(`Anh (${i}).jpg`);
 }
 
 const starCanvas = document.getElementById("star-canvas");
